@@ -1,0 +1,92 @@
+/* Resets some basic values */
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+ul, p {
+ margin: 0;
+ padding: 0;
+}
+
+/* Main CSS file */
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  top: 0;
+  left: 0;
+  width: 200px;
+  min-width: 200px;
+  text-align: left;
+  height: 100vh;
+  border-right: 4px double #b1b6b7;
+  transition: 0.3s;
+  min-height: 450px;
+}
+
+header {
+  margin: 16px auto;
+}
+
+img.logo {
+  background-color: grey;
+  height: 110px;
+  width: 180px;
+}
+
+#sidebar a {
+  color: #2b2b2b;
+  text-decoration: none;
+  margin-left: 1em;
+  transition: 0.3s;
+}
+
+#sidebar a:hover {
+  color: #2b2bb2;
+}
+
+#sidebar ul > li {
+  border-bottom: 2px solid #b1b6b7;
+  list-style: none;
+  font-size: 1.3em;
+  padding: 0.6em 0;
+  transition: 0.3s;
+}
+
+#sidebar ul > li:hover {
+  border-bottom: 2px solid #2b2bb2;
+}
+
+#sidebar ul > li:first-of-type {
+  border-top: 2px solid #b1b6b7;
+}
+
+#sidebar ul {
+  padding: 0;
+  text-align: left;
+  flex: 1;
+}
+
+footer {
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+
+@media only screen and (max-height: 460px) {
+  footer {
+    margin-top: 0.5em;
+  }
+}
+
+footer.author .avatar-image {
+  background-color: grey;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
