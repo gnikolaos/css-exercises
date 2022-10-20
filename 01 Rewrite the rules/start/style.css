@@ -1,5 +1,9 @@
+:root {
+    --main-bg-color: #011212;
+}
+
 body {
-    background-color: #011212;
+    background-color: var(--main-bg-color);
 }
 
 .ball {
