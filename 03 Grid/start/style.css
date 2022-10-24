@@ -1,6 +1,7 @@
 /* basic reset */
 html {
   box-sizing: border-box;
+  font-size: 14px;
 }
 *, *::before, *::after {
   margin: 0;
@@ -12,9 +13,9 @@ button, input {
 }
 
 /* main css */
-body {
-  font-size: 16px;
-  font-weight: 1000;
+body, button {
+  font-size: 14px; 
+  font-weight: 600;
 }
 .calculator-container {
   width: 400px;
@@ -50,6 +51,8 @@ button:nth-child(4) {
   text-align: right;
   background-color: #424d53;
   color: white;
+  padding-right: 0.5em;
+  font-size: 2em;
 }
 .operator {
   background-color: #d2dce3;
