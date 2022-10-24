@@ -25,14 +25,15 @@ body, button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*border-radius: 8px;
-  box-shadow: 1px 2px 8px rgb(0 0 0 / 65%); */
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgb(0 0 0 / 65%); 
 }
 .calc-buttons {
   display: grid;
   grid-template-columns:  repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
+
 button {
   height: 60px;
   border-right: 1px solid #889cad;
@@ -40,6 +41,12 @@ button {
 }
 button:nth-child(n+14){
   border-bottom: none;
+}
+button:nth-child(14) {
+  border-radius:  0 0 0 8px ;
+}
+button:nth-child(17) {
+  border-radius: 0 0 8px 0;
 }
 button.equals,
 button:nth-child(4) {
@@ -51,8 +58,9 @@ button:nth-child(4) {
   text-align: right;
   background-color: #424d53;
   color: white;
-  padding-right: 0.5em;
+  padding-right: 0.2em;
   font-size: 2em;
+  border-radius: 8px 8px 0 0;
 }
 .operator {
   background-color: #d2dce3;
