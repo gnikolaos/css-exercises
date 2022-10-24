@@ -7,50 +7,55 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
-button {
+button, input {
   border: none;
 }
 
 /* main css */
-
+body {
+  font-size: 16px;
+  font-weight: 1000;
+}
 .calculator-container {
-  border-radius: 8px;
-  box-shadow: 1px 2px 8px rgb(0 0 0 / 65%); 
-  background-color: #eef2f4;
+  width: 400px;
   color: black;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  /*border-radius: 8px;
+  box-shadow: 1px 2px 8px rgb(0 0 0 / 65%); */
+}
+.calc-buttons {
   display: grid;
   grid-template-columns:  repeat(4, 1fr);
-  grid-template-rows: auto 17% 17% 17% 17% 17%;
+  grid-template-rows: repeat(5, 1fr);
 }
-
 button {
   height: 60px;
   border-right: 1px solid #889cad;
   border-bottom: 1px solid #889cad;
 }
-button:nth-child(n+15) {
+button:nth-child(n+14){
   border-bottom: none;
 }
-
+button.equals,
+button:nth-child(4) {
+  border-right: none;
+}
 .result {
-  grid-area: 1 / 1 / 2 / 5;
+  width: 100%;
+  height: 45px;
   text-align: right;
   background-color: #424d53;
   color: white;
 }
-
 .operator {
   background-color: #d2dce3;
 }
-
 .equals {
-  grid-area: 3 / 4 / 7 / 5;
+  grid-area: 2 / 4 / 6 / 5;
   background-color: #f77077;
   height: 100%;
 }
