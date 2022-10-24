@@ -41,7 +41,7 @@ h2 {font-size: 1.953rem;}
 /* main css */
 
 .card {
-  max-width: 450px;
+  max-width: 350px;
   min-width: 310px;
   height: auto;
   display: flex;
