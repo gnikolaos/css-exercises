@@ -7,10 +7,15 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
+button {
+  border: none;
+}
+
 /* main css */
+
 .calculator-container {
-  border: 1px solid #ccc;
-  border-radius: 15px;  
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgb(0 0 0 / 65%); 
   background-color: #eef2f4;
   color: black;
   text-align: center;
@@ -18,10 +23,19 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 400px;
   display: grid;
   grid-template-columns:  repeat(4, 1fr);
-  grid-template-rows: 1fr 16% 16% 16% 16% 16%;
+  grid-template-rows: auto 17% 17% 17% 17% 17%;
+}
+
+button {
+  height: 60px;
+  border-right: 1px solid #889cad;
+  border-bottom: 1px solid #889cad;
+}
+button:nth-child(n+15) {
+  border-bottom: none;
 }
 
 .result {
@@ -38,4 +52,5 @@ html {
 .equals {
   grid-area: 3 / 4 / 7 / 5;
   background-color: #f77077;
+  height: 100%;
 }
