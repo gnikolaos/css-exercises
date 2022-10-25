@@ -98,6 +98,10 @@ nav ul li select {
   border: none;
 }
 
+nav ul li select:hover, nav ul li label:hover {
+  color: white;
+}
+
 .searchbox{
   float: right;
   display: block;
