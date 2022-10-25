@@ -87,6 +87,12 @@ nav ul li {
   display: block;
 }
 
+nav ul li select {
+  color: #9a9c9e;
+  background-color: #202429;
+  border: none;
+}
+
 .searchbox{
   float: right;
   display: block;
