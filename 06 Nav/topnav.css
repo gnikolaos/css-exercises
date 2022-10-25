@@ -20,6 +20,7 @@ body {
 @media only screen and (max-width: 768px){
   header nav.nav {display: none; }
   header .ham {display: block;}
+  header .mobile-nav {margin-left: auto;}
 }
 
 .header {
@@ -27,10 +28,16 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  min-width: 145px;
   margin: 0.5em 1em;
   background-color: #202429;
   color: white;
   padding: 1em;
+  column-gap: 0.5em;
+}
+
+header .nav {
+  display: flex;
 }
 
 .header h1 {
@@ -60,8 +67,8 @@ a#disabled {
 .ham {
   display: none;
   width: 35px;
-  height: 5px;
-  background-color: black;
+  height: 4px;
+  background-color: white;
   margin: 6px 0;
 }
 
@@ -71,9 +78,4 @@ a#disabled {
 
 ul li {
   display: inline;
-}
-
-.nav {
-  display: flex;
-  flex-flow: row nowrap;
 }
