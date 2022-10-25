@@ -60,11 +60,11 @@ ul li a {
 
 nav ul li a:hover {
   color: white;
- }
+}
 
-nav ul li.active {
+#active {
   color: white;
- }
+}
 
 a#disabled {
   color: #595b5f;
