@@ -1,0 +1,117 @@
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+
+/* reset */
+html, body, ul, h1{
+  margin: 0;
+  padding: 0;
+}
+
+* {box-sizing: border-box;}
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+/* main css */
+@media only screen and (max-width: 768px){
+  header nav.nav, header .searchbox {display: none; }
+  header .ham {display: block;}
+  header .mobile-nav {margin-left: auto;}
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 145px;
+  margin: 0.5em 1em;
+  background-color: #202429;
+  color: white;
+  padding: 1em;
+  column-gap: 0.5em;
+}
+
+nav.nav {
+  margin-right: auto;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul li, nav ul li a {
+ color: #9a9c9e;
+}
+
+nav ul li {
+  padding: 0.5em;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+#active {
+  color: white;
+}
+
+a#disabled {
+  color: #595b5f;
+}
+
+.ham {
+  display: none;
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  display: block;
+}
+
+nav ul li select {
+  color: #9a9c9e;
+  background-color: #202429;
+  border: none;
+}
+
+.searchbox{
+  float: right;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.searchbox input {
+  padding: 12px;
+}
+
+.searchbox button {
+  padding: 12px;
+  background-color: inherit;
+  color: #217d53;
+  border: 1px solid #217d53;
+}
+
+.searchbox button:hover {
+  background-color: #217d53;
+  color: white;
+}

@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar exercise</title>
+    <title>Navbar</title>
     <link rel="stylesheet" href="topnav.css">
 </head>
 <body>
   <main>
     <header class="header">
       <h1>Navbar</h1>
+      <!-- Mobile menu -->
+      <nav class="mobile-nav">
+        <!-- Hamburger icon -->
+        <div class="ham"></div>
+        <div class="ham"></div>
+        <div class="ham"></div>
+      </nav>
+      <!-- Main menu -->
       <nav class="nav">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a id="active" href="#home">Home</a>
           </li>
 
           <li>
@@ -37,19 +45,18 @@
           </li>
 
           <li>
-            <a role="link" aria-disabled="true">Disabled</a>
+            <a id="disabled" role="link" aria-disabled="true">Disabled</a>
           </li>
-
+          
         </ul>
 
-        <div class="searchbox">
-          <form action="#">
-            <input type="text" name="search" placeholder="Search" />
-            <button type="submit">Search</button> 
-          </form>
-        </div>
-        
       </nav>
+
+      <div class="searchbox">
+        <input type="text" name="search" placeholder="Search" />
+        <button type="submit">Search</button> 
+      </div>
+
     </header>
   </main>    
 </body>
