@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar exercise</title>
+    <link rel="stylesheet" href="topnav.css">
+</head>
+<body>
+  <main>
+    <header class="header">
+      <h1>Navbar</h1>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#link">Link</a>
+          </li>
+
+          <li>
+            <label for="dropdown">Dropdown</label>
+            <select name="dropdown" id="dropdown">
+              <option value="link1">
+                <a href="#"></a>
+              </option>
+              <option value="link2">
+                <a href="#"></a>
+              </option>
+              <option value="link3">
+                <a href="#"></a>
+              </option>
+            </select>
+          </li>
+
+          <li>
+            <a role="link" aria-disabled="true">Disabled</a>
+          </li>
+
+        </ul>
+
+        <div class="searchbox">
+          <form action="#">
+            <input type="text" name="search" placeholder="Search" />
+            <button type="submit">Search</button> 
+          </form>
+        </div>
+        
+      </nav>
+    </header>
+  </main>    
+</body>
+</html>
