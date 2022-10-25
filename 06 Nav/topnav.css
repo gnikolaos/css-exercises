@@ -1,6 +1,60 @@
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+
+/* reset */
+html, body, ul, h1{
+  margin: 0;
+  padding: 0;
+}
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+/* main css */
 @media only screen and (max-width: 768px){
   header nav.nav {display: none; }
   header .ham {display: block;}
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em 1em;
+  background-color: #202429;
+  color: white;
+  padding: 1em;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+ul li, ul li a {
+ color: #9a9c9e;
+}
+
+ul li {
+  padding: 0.5em;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+ul li a:active, ul li a:hover {
+  color: white;
+ }
+
+a#disabled {
+  color: #595b5f;
 }
 
 .ham {
@@ -9,4 +63,17 @@
   height: 5px;
   background-color: black;
   margin: 6px 0;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
 }
