@@ -50,12 +50,14 @@ h5 {font-size: 1.25rem;}
 section.card {
   max-width: 25em;
   height: auto;
+  margin: 2em 1em;
 }
 
 /* ---------CARD HEADER--------- */
 
 .card-header {
   margin: 0.2em 0.5em;
+  overflow: hidden;
 }
 
 .card-header h1 {
