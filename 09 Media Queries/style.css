@@ -1,7 +1,7 @@
-/* font */
+/* ---------FONT--------- */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
 
-/* reset */
+/* ---------RESET--------- */
 * {box-sizing: border-box;}
 
 html,body {
@@ -11,17 +11,17 @@ html,body {
 
 html {font-size: 100%;} /* 16px */
 
-/* Mobile screen */
+/* ---------MOBILE SCREEN--------- */
 @media only screen and (max-width: 375px;) {
 
 }
 
-/* Tablet screen */
+/* ---------TABLET SCREEN--------- */
 @media and only screen and (max-width: 768px;) {
 
 }
 
-/* Main css */
+/* ---------MAIN CSS--------- */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -29,4 +29,109 @@ body {
   color: black;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
 
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+section.card {
+  max-width: 25em;
+  height: auto;
+}
+
+/* ---------CARD HEADER--------- */
+
+.card-header {
+  margin: 0.2em 0.5em;
+}
+
+.card-header h1 {
+  font-size: 1.5em;
+}
+
+.card-header h2 {
+  font-size: 1.2em;
+}
+
+.card-uploaders-avatar {
+  width: 3em;
+  height: 3em;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  margin: 0 1em 0 0;
+}
+
+.card-upload-info {
+  display: block;
+  float: left;
+}
+
+.card-uploaders-name {
+  margin: 0 1em 0 0;
+}
+
+.card-fulldate {
+  margin: 0 1em 0 0;
+}
+
+.card-settings {
+  display: block;
+  float: right;
+  margin: 1.2em 0 1em 0;
+}
+
+.dot {
+  width: 0.5em;
+  height: 0.5em;
+  background-color: black;
+  border-radius: 50%;
+  float: left;
+}
+
+/* ---------CARD COVER--------- */
+
+.card-cover-img-container {
+  height: 19.6875em;
+}
+
+.card-img {
+  width: 100%;
+  max-height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+/* ---------CARD FOOTER--------- */
+
+.card-footer i.card-interaction-like::before {
+  content: "\2661";
+}
+
+.card-footer i.card-interaction-comment::before {
+  content: "\270E";
+  
+}
+
+.card-footer span.card-topic::before {
+  content: "Gato"; /* change the topic here */
+}
+
+.card-footer .card-topic {
+  text-transform: lowercase;
+  font-weight: bold;
+}
