@@ -1,0 +1,32 @@
+/* font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400");
+
+/* reset */
+* {box-sizing: border-box;}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+html {font-size: 100%;} /* 16px */
+
+/* Mobile screen */
+@media only screen and (max-width: 375px;) {
+
+}
+
+/* Tablet screen */
+@media and only screen and (max-width: 768px;) {
+
+}
+
+/* Main css */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: black;
+}
+
+
