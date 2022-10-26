@@ -1,6 +1,7 @@
 body {
   display: flex;
-
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 #yellow {
@@ -17,6 +18,7 @@ body {
 
 #orange {
   order: 4;
+  flex: 1;
 }
 
 #blue {
