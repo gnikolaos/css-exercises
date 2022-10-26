@@ -51,6 +51,7 @@ section.card {
   max-width: 25em;
   height: auto;
   margin: 2em 1em;
+  float: left;
 }
 
 /* ---------CARD HEADER--------- */
