@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr; 
+  grid-template-areas: 
+    "header header header"
+    "main-left main-center main-right"
+    "footer footer main-right"
+  ;
+}
+
+#green {
+  grid-area: header;
+}
+
+#yellow {
+  grid-area: main-left;
+}
+
+#orange {
+  grid-area: footer;
+}
+
+#red {
+  grid-area: main-center;
+}
+
+#blue {
+  grid-area: main-right;
+}
