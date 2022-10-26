@@ -16,6 +16,11 @@ body {
   grid-area: main-left;
 }
 
+#yellow ul, #red ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 #orange {
   grid-area: footer;
 }
