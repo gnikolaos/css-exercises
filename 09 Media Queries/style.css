@@ -135,13 +135,13 @@ section.card {
 }
 
 .card-footer i.card-interaction-like {
-  margin-left: 0.5em;
+  margin-left: 0.35em;
   font-weight: 600;
   font-size: 1.88em;
 }
 
 .card-footer i.card-interaction-comment {
-  margin-left: 0.5em;
+  margin-left: 0.2em;
   font-size: 2em;
 }
 
