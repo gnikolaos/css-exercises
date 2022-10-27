@@ -4,7 +4,7 @@
 /* ---------RESET--------- */
 * {box-sizing: border-box;}
 
-html,body {
+html,body,p {
   margin: 0;
   padding: 0;
 }
@@ -57,8 +57,11 @@ section.card {
 /* ---------CARD HEADER--------- */
 
 .card-header {
-  margin: 0.2em 0.5em;
+  width: 100%;
+  padding: 0.3em 1em;
+  border-radius: 2.2em 2.2em 0 0;
   overflow: hidden;
+  background-color: #b0b1b0;
 }
 
 .card-header h1 {
@@ -72,7 +75,7 @@ section.card {
 .card-uploaders-avatar {
   width: 3em;
   height: 3em;
-  background-color: black;
+  background-color: #fefeff;
   border-radius: 50%;
   display: block;
   float: left;
@@ -90,6 +93,7 @@ section.card {
 
 .card-fulldate {
   margin: 0 1em 0 0;
+  color: #fefeff;;
 }
 
 .card-settings {
@@ -122,20 +126,45 @@ section.card {
 
 /* ---------CARD FOOTER--------- */
 
+.card-footer {
+  background-color: #f0f0f1;
+  padding: 1em 1em 3.5em 1em;
+  border-radius: 0 0 2.2em 2.2em;
+}
+
+.card-footer i.card-interaction-like {
+  margin-left: 0.5em;
+  font-weight: 600;
+  font-size: 1.88em;
+}
+
+.card-footer i.card-interaction-comment {
+  margin-left: 0.5em;
+  font-size: 2em;
+}
+
+.card-footer i.card-interaction-like:hover {
+  color: #ff0000;
+}
+
+.card-footer i.card-interaction-comment:hover {
+  color: #085e90;
+}
+
 .card-footer i.card-interaction-like::before {
   content: "\2661";
 }
 
 .card-footer i.card-interaction-comment::before {
   content: "\270E";
-  
+  font-weight: 550;
 }
 
 .card-footer span.card-topic::before {
-  content: "Gato"; /* change the topic here */
+  content: "Gatto"; /* change the topic here */
+  font-weight: bold;
 }
 
 .card-footer .card-topic {
   text-transform: lowercase;
-  font-weight: bold;
 }
