@@ -52,6 +52,8 @@ section.card {
   height: auto;
   margin: 2em 1em;
   float: left;
+  border-radius: 2.2em;
+  box-shadow: 2px 3px 3px 3px rgba(20,20,20,0.1);
 }
 
 /* ---------CARD HEADER--------- */
