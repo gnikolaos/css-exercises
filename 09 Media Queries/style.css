@@ -38,17 +38,17 @@ h4 {font-size: 1.563rem;}
 h5 {font-size: 1.25rem;}
 
 .cards-container {
-  /* display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start; */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  overflow-x: scroll;
 }
 
 section.card {
-  max-width: 25em;
-  min-width: 15em;
+  max-width: 30em;
+  min-width: 20.6em;
   height: auto;
   margin: 2em 1em;
-  float: left;
   border-radius: 2.2em;
   box-shadow: 2px 3px 3px 3px rgba(20,20,20,0.1);
 }
@@ -171,16 +171,17 @@ section.card {
 /* ---------TABLET SCREEN--------- */
 
 @media screen and (max-width: 768px) {
-  body {
-    background-color: green;
+  .cards-container {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
   }
 }
 
 /* ---------MOBILE SCREEN--------- */
 
 @media screen and (max-width: 375px) {
-
-  body {
-    background-color: red;
+  .cards-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
