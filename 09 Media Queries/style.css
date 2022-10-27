@@ -41,7 +41,7 @@ h5 {font-size: 1.25rem;}
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: auto;
-  overflow-x: scroll;
+  overflow-x: visible;
 }
 
 section.card {
@@ -121,6 +121,10 @@ section.card {
   max-height: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+.img2 {
+  object-position: top;
 }
 
 /* ---------CARD FOOTER--------- */
