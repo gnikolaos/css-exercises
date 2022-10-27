@@ -11,16 +11,6 @@ html,body,p {
 
 html {font-size: 100%;} /* 16px */
 
-/* ---------MOBILE SCREEN--------- */
-@media only screen and (max-width: 375px;) {
-
-}
-
-/* ---------TABLET SCREEN--------- */
-@media and only screen and (max-width: 768px;) {
-
-}
-
 /* ---------MAIN CSS--------- */
 body {
   font-family: "Poppins", sans-serif;
@@ -47,8 +37,15 @@ h4 {font-size: 1.563rem;}
 
 h5 {font-size: 1.25rem;}
 
+.cards-container {
+  /* display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start; */
+}
+
 section.card {
   max-width: 25em;
+  min-width: 15em;
   height: auto;
   margin: 2em 1em;
   float: left;
@@ -169,4 +166,21 @@ section.card {
 
 .card-footer .card-topic {
   text-transform: lowercase;
+}
+
+/* ---------TABLET SCREEN--------- */
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* ---------MOBILE SCREEN--------- */
+
+@media screen and (max-width: 375px) {
+
+  body {
+    background-color: red;
+  }
 }
