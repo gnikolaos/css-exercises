@@ -1,0 +1,3 @@
+@function pixtorem($number) {
+  @return calc($number/16) + rem;
+}
