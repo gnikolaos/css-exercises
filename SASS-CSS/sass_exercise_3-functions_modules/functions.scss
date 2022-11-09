@@ -1,6 +1,5 @@
 @function pixtorem($number) {
   @if type-of($number) == number {
-    $number: $number;
     $number: calc($number/16) + rem;
     @return $number;
   } @else {
