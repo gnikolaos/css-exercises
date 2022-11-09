@@ -1,0 +1,42 @@
+body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+}
+body .exercise {
+  grid-column: 2/3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: fit-content;
+  border: 1px solid red;
+  padding: 1rem;
+  margin: 1rem;
+}
+body .exercise .exercise-title {
+  width: fit-content;
+  color: green;
+  border-bottom: 1px solid blue;
+  text-align: center;
+  padding-top: 2rem;
+}
+body .exercise .article-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+body .exercise .article-container .article {
+  border: 1px solid green;
+}
+body .exercise .article-container .article .text {
+  max-width: 35ch;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,1 +1,47 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items:  center;
+  .exercise {
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: fit-content;
+    border: 1px solid $color-primary;
+    padding: 1rem;
+    margin: 1rem;
+    .exercise-title {
+      width: fit-content;
+      color: $color-tertiary;
+      border-bottom: 1px solid $color-secondary;
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .article-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      .article {
+        border: 1px solid $color-tertiary;
+        .text {
+          max-width: 35ch;
+          text-align: center;
+          padding: 3rem 1rem;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+
+}
 
