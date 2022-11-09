@@ -1,6 +1,4 @@
-$color-primary: red;
-$color-secondary: blue;
-$color-tertiary: green;
+@use "variables.scss" as v;
 
 * {
   margin: 0;
@@ -29,13 +27,13 @@ body {
     display: flex;
     flex-flow: column nowrap;
     place-items: center;
-    border: 1px solid $color-primary;
+    border: 1px solid v.$color-primary;
     gap: 1.2rem;
     padding: 2rem 1rem 1rem 1rem;
     .exercise-title {
       width: fit-content;
-      color: $color-tertiary;
-      border-bottom: 1px solid $color-secondary;
+      color: v.$color-tertiary;
+      border-bottom: 1px solid v.$color-secondary;
       text-align: center;
     }
     .article-container {
@@ -44,14 +42,14 @@ body {
       width: 100%;
       max-width: 80rem;
       .article:nth-child(even) {
-        @include article-base($color-primary, $color-tertiary);
+        @include article-base(v.$color-primary, v.$color-tertiary);
       }
       .article:nth-child(odd) {
-        @include article-base($color-secondary, $color-tertiary);
+        @include article-base(v.$color-secondary, v.$color-tertiary);
       }
     }
   }
   .footer {
-    @include article-base($color-tertiary, $color-secondary, 1.5rem);
+    @include article-base(v.$color-tertiary, v.$color-secondary, 1.5rem);
   }
 }
