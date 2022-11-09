@@ -1,0 +1,57 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin article-base($color, $border-color, $font-size: 1rem) {
+  color: $color;
+  border: 1px solid $border-color;
+  font-size: $font-size;
+  padding: 2rem 1rem;
+  min-height: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-size: 100%; // 16px 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items:  center;
+  margin: 1rem;
+  .exercise {
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    border: 1px solid $color-primary;
+    gap: 1.2rem;
+    padding: 2rem 1rem 1rem 1rem;
+    .exercise-title {
+      width: fit-content;
+      color: $color-tertiary;
+      border-bottom: 1px solid $color-secondary;
+      text-align: center;
+    }
+    .article-container {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      max-width: 80rem;
+      .article:nth-child(even) {
+        @include article-base($color-primary, $color-tertiary);
+      }
+      .article:nth-child(odd) {
+        @include article-base($color-secondary, $color-tertiary);
+      }
+    }
+  }
+  .footer {
+    @include article-base($color-tertiary, $color-secondary, 1.5rem);
+  }
+}
