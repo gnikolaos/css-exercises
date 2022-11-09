@@ -38,5 +38,8 @@ body .exercise .article-container .article .text {
   padding: 3rem 1rem;
   color: red;
 }
+body .exercise .article-container .article:nth-child(odd) .text {
+  color: blue;
+}
 
 /*# sourceMappingURL=style.css.map */

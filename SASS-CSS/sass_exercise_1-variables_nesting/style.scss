@@ -39,9 +39,10 @@ body {
           color: $color-primary;
         }
       }
+      .article:nth-child(odd) .text {
+        color: $color-secondary;
+      }
     }
   }
-
-
 }
 
