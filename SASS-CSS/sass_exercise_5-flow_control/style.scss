@@ -1,0 +1,118 @@
+@use "../sass_exercise_3-functions_modules/variables.scss" as v;
+@use "../sass_exercise_3-functions_modules/functions.scss" as f;
+@use "sass:color";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin article-base($color, $border-color, $font-size: f.pixtorem(16)) {
+  color: $color;
+  border: f.pixtorem(1) solid $border-color;
+  font-size: $font-size;
+  padding: f.pixtorem(32) f.pixtorem(16);
+  min-height: f.pixtorem(96);
+  width: 100%;
+  text-align: center;
+}
+
+.header-style {
+  width: fit-content;
+  color: v.$color-tertiary;
+  border-bottom: f.pixtorem(1) solid v.$color-secondary;
+  text-align: center;
+}
+
+.flexyrow {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: f.pixtorem(1280);
+}
+
+body {
+  font-size: 100%; // 16px 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  margin: f.pixtorem(16);
+
+  .exercise {
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    border: f.pixtorem(1) solid v.$color-primary;
+    gap: f.pixtorem(19.2);
+    padding: f.pixtorem(32) f.pixtorem(16) f.pixtorem(16) f.pixtorem(16);
+
+    &-title {
+      @extend .header-style;
+    }
+
+    &-subtitle {
+      @extend .header-style;
+      border: f.pixtorem(1) solid v.$color-primary;
+      padding: f.pixtorem(16);
+    }
+
+    .article-container {
+      @extend .flexyrow;
+
+      .article:nth-child(even) {
+        @include article-base(v.$color-primary, v.$color-tertiary);
+      }
+
+      .article:nth-child(odd) {
+        @include article-base(v.$color-secondary, v.$color-tertiary);
+      }
+    }
+
+    $boxes: (
+      "box 1": 1rem,
+      "box 2": 2rem,
+      "box 3": 3rem
+    );
+
+  .fs {
+    @extend .flexyrow;
+    justify-content: space-between;
+
+    @each $key, $value in $boxes {
+      &-#{$value} {
+        width: f.pixtorem(45);
+        height: f.pixtorem(45);
+        border: f.pixtorem(1) solid v.$color-primary;
+        font-size: $value;
+      }
+    }
+
+    @for $var from 1 to 20 {
+      @debug $var;
+      &#{" "div}:nth-of-type(#{$var}) {
+        @if $var < 10 or $var > 10{
+          $bg-color: color.adjust(white, $lightness: calc($var * -5%));
+          $text-color: color.adjust(black, $lightness: calc($var * 5%));
+          background-color: $bg-color;
+          color: $text-color;
+        } @else {
+          $text-color: color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%);
+          // $bg-color: color.complement(color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%));
+          background-color: v.$color-secondary;
+          color: $text-color;
+          font-weight: bolder;
+        }
+      }        
+    }
+  }
+}
+
+
+
+.footer {
+  @include article-base(v.$color-tertiary, v.$color-secondary, f.pixtorem(24));
+}
+
+}
