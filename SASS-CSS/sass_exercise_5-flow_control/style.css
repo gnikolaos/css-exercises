@@ -77,6 +77,83 @@ body .exercise .fs-3rem {
   border: 0.0625rem solid red;
   font-size: 3rem;
 }
+body .exercise .fs div:nth-of-type(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+body .exercise .fs div:nth-of-type(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+body .exercise .fs div:nth-of-type(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+body .exercise .fs div:nth-of-type(4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+body .exercise .fs div:nth-of-type(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+body .exercise .fs div:nth-of-type(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+body .exercise .fs div:nth-of-type(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+body .exercise .fs div:nth-of-type(8) {
+  background-color: #999999;
+  color: #666666;
+}
+body .exercise .fs div:nth-of-type(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+body .exercise .fs div:nth-of-type(10) {
+  background-color: #00cdcd;
+  color: #cd0000;
+  font-weight: bolder;
+}
+body .exercise .fs div:nth-of-type(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+body .exercise .fs div:nth-of-type(12) {
+  background-color: #666666;
+  color: #999999;
+}
+body .exercise .fs div:nth-of-type(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+body .exercise .fs div:nth-of-type(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+body .exercise .fs div:nth-of-type(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+body .exercise .fs div:nth-of-type(16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+body .exercise .fs div:nth-of-type(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+body .exercise .fs div:nth-of-type(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+body .exercise .fs div:nth-of-type(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
 body .footer {
   color: green;
   border: 0.0625rem solid blue;
