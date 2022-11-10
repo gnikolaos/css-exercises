@@ -38,6 +38,7 @@ body {
   grid-template-columns: auto 1fr auto;
   place-items:  center;
   margin: f.pixtorem(16);
+
   .exercise {
     grid-column: 2/3;
     display: flex;
@@ -46,14 +47,17 @@ body {
     border: f.pixtorem(1) solid v.$color-primary;
     gap: f.pixtorem(19.2);
     padding: f.pixtorem(32) f.pixtorem(16) f.pixtorem(16) f.pixtorem(16);
+
     &-title {
       @extend .header-style;
     }
+
     &-subtitle {
       @extend .header-style;
       border: f.pixtorem(1) solid v.$color-primary;
       padding: f.pixtorem(16);
     }
+
     .article-container {
       @extend .flexyrow;
       .article:nth-child(even) {
@@ -63,11 +67,27 @@ body {
         @include article-base(v.$color-secondary, v.$color-tertiary);
       }
     }
+
+    $boxes: (
+      "box 1": 1rem,
+      "box 2": 2rem,
+      "box 3": 3rem
+    );
+
     .fs {
       @extend .flexyrow;
+      @each $key, $value in $boxes {
+        &-#{$value} {
+          width: f.pixtorem(45);
+          height: f.pixtorem(45);
+          border: f.pixtorem(1) solid v.$color-primary;
+        }
+      }
     }
   }
+
   .footer {
     @include article-base(v.$color-tertiary, v.$color-secondary, f.pixtorem(24));
   }
+
 }
