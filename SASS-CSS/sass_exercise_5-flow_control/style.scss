@@ -1,5 +1,6 @@
 @use "../sass_exercise_3-functions_modules/variables.scss" as v;
 @use "../sass_exercise_3-functions_modules/functions.scss" as f;
+@use "sass:color";
 
 * {
   margin: 0;
@@ -22,6 +23,13 @@
   color: v.$color-tertiary;
   border-bottom: f.pixtorem(1) solid v.$color-secondary;
   text-align: center;
+}
+
+.flexyrow {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: f.pixtorem(1280);
 }
 
 body {
@@ -47,16 +55,16 @@ body {
       padding: f.pixtorem(16);
     }
     .article-container {
-      display: flex;
-      flex-flow: row nowrap;
-      width: 100%;
-      max-width: f.pixtorem(1280);
+      @extend .flexyrow;
       .article:nth-child(even) {
         @include article-base(v.$color-primary, v.$color-tertiary);
       }
       .article:nth-child(odd) {
         @include article-base(v.$color-secondary, v.$color-tertiary);
       }
+    }
+    .fs {
+      @extend .flexyrow;
     }
   }
   .footer {
