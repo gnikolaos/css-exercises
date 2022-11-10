@@ -1,0 +1,56 @@
+@use "../sass_exercise_3-functions_modules/variables.scss" as v;
+@use "../sass_exercise_3-functions_modules/functions.scss" as f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin article-base($color, $border-color, $font-size: f.pixtorem(16)) {
+  color: $color;
+  border: f.pixtorem(1) solid $border-color;
+  font-size: $font-size;
+  padding: f.pixtorem(32) f.pixtorem(16);
+  min-height: f.pixtorem(96);
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-size: 100%; // 16px 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items:  center;
+  margin: f.pixtorem(16);
+  .exercise {
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    border: f.pixtorem(1) solid v.$color-primary;
+    gap: f.pixtorem(19.2);
+    padding: f.pixtorem(32) f.pixtorem(16) f.pixtorem(16) f.pixtorem(16);
+    .exercise-title {
+      width: fit-content;
+      color: v.$color-tertiary;
+      border-bottom: f.pixtorem(1) solid v.$color-secondary;
+      text-align: center;
+    }
+    .article-container {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      max-width: f.pixtorem(1280);
+      .article:nth-child(even) {
+        @include article-base(v.$color-primary, v.$color-tertiary);
+      }
+      .article:nth-child(odd) {
+        @include article-base(v.$color-secondary, v.$color-tertiary);
+      }
+    }
+  }
+  .footer {
+    @include article-base(v.$color-tertiary, v.$color-secondary, f.pixtorem(24));
+  }
+}
