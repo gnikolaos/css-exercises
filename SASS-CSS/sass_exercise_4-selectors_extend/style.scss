@@ -17,6 +17,13 @@
   text-align: center;
 }
 
+.header-style {
+  width: fit-content;
+  color: v.$color-tertiary;
+  border-bottom: f.pixtorem(1) solid v.$color-secondary;
+  text-align: center;
+}
+
 body {
   font-size: 100%; // 16px 
   display: grid;
@@ -31,11 +38,13 @@ body {
     border: f.pixtorem(1) solid v.$color-primary;
     gap: f.pixtorem(19.2);
     padding: f.pixtorem(32) f.pixtorem(16) f.pixtorem(16) f.pixtorem(16);
-    .exercise-title {
-      width: fit-content;
-      color: v.$color-tertiary;
-      border-bottom: f.pixtorem(1) solid v.$color-secondary;
-      text-align: center;
+    &-title {
+      @extend .header-style;
+    }
+    &-subtitle {
+      @extend .header-style;
+      border: f.pixtorem(1) solid v.$color-primary;
+      padding: f.pixtorem(16);
     }
     .article-container {
       display: flex;

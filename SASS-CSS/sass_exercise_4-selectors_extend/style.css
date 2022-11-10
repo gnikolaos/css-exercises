@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.header-style, body .exercise-subtitle, body .exercise-title {
+  width: fit-content;
+  color: green;
+  border-bottom: 0.0625rem solid blue;
+  text-align: center;
+}
+
 body {
   font-size: 100%;
   display: grid;
@@ -20,11 +27,9 @@ body .exercise {
   gap: 1.2rem;
   padding: 2rem 1rem 1rem 1rem;
 }
-body .exercise .exercise-title {
-  width: fit-content;
-  color: green;
-  border-bottom: 0.0625rem solid blue;
-  text-align: center;
+body .exercise-subtitle {
+  border: 0.0625rem solid red;
+  padding: 1rem;
 }
 body .exercise .article-container {
   display: flex;
