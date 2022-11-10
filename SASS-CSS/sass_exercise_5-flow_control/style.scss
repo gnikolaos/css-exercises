@@ -99,12 +99,11 @@ body {
           color: $text-color;
         } @else {
           $text-color: color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%);
-          $bg-color: color.complement(color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%));
-          background-color: $bg-color;
+          // $bg-color: color.complement(color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%));
+          background-color: v.$color-secondary;
           color: $text-color;
           font-weight: bolder;
         }
-
       }        
     }
   }
