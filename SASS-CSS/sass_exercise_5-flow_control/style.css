@@ -114,6 +114,8 @@ body .exercise .fs div:nth-of-type(9) {
   color: #737373;
 }
 body .exercise .fs div:nth-of-type(10) {
+  background-color: gray;
+  color: gray;
   background-color: blue;
   color: #cd0000;
   font-weight: bolder;

@@ -90,26 +90,21 @@ body {
     }
 
     @for $var from 1 to 20 {
-      @debug $var;
       &#{" "div}:nth-of-type(#{$var}) {
-        @if $var < 10 or $var > 10{
-          $bg-color: color.adjust(white, $lightness: calc($var * -5%));
-          $text-color: color.adjust(black, $lightness: calc($var * 5%));
-          background-color: $bg-color;
-          color: $text-color;
-        } @else {
+        $bg-color: color.adjust(white, $lightness: calc($var * -5%));
+        $text-color: color.adjust(black, $lightness: calc($var * 5%));
+        background-color: $bg-color;
+        color: $text-color;
+        @if $var == 10 {
           $text-color: color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%);
-          // $bg-color: color.complement(color.adjust(color.adjust(black, $blackness: calc($var * -5%)), $lightness: 15%));
           background-color: v.$color-secondary;
           color: $text-color;
           font-weight: bolder;
-        }
+        } 
       }        
     }
   }
 }
-
-
 
 .footer {
   @include article-base(v.$color-tertiary, v.$color-secondary, f.pixtorem(24));
