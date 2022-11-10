@@ -56,20 +56,26 @@ body .exercise .article-container .article:nth-child(odd) {
   width: 100%;
   text-align: center;
 }
+body .exercise .fs {
+  justify-content: space-between;
+}
 body .exercise .fs-1rem {
   width: 2.8125rem;
   height: 2.8125rem;
   border: 0.0625rem solid red;
+  font-size: 1rem;
 }
 body .exercise .fs-2rem {
   width: 2.8125rem;
   height: 2.8125rem;
   border: 0.0625rem solid red;
+  font-size: 2rem;
 }
 body .exercise .fs-3rem {
   width: 2.8125rem;
   height: 2.8125rem;
   border: 0.0625rem solid red;
+  font-size: 3rem;
 }
 body .footer {
   color: green;

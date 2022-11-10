@@ -76,11 +76,13 @@ body {
 
     .fs {
       @extend .flexyrow;
+      justify-content: space-between;
       @each $key, $value in $boxes {
         &-#{$value} {
           width: f.pixtorem(45);
           height: f.pixtorem(45);
           border: f.pixtorem(1) solid v.$color-primary;
+          font-size: $value;
         }
       }
     }
